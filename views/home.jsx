@@ -5,7 +5,9 @@ const Home = () => {
   return (
     <Html>
       <div className="container">
-        <div>Eat-Da-Burger!</div>
+        <div>
+          <h3>Eat-Da-Burger!</h3>
+        </div>
 
         <div class="row">
           <div class="input-field col s6">
@@ -14,7 +16,7 @@ const Home = () => {
           </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <button class="btn waves-effect orange accent-3" type="submit" name="action">Submit
         <i class="material-icons right">send</i>
         </button>
 
