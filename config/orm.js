@@ -44,3 +44,4 @@ updateOne = (burger, cb) => {
 
 
 }
+module.exports = orm

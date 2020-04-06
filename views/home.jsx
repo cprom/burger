@@ -9,15 +9,15 @@ const Home = () => {
           <h3>Eat-Da-Burger!</h3>
         </div>
 
-        <div class="row">
-          <div class="input-field col s6">
-            <input value=" " id="first_name2" type="text" class="validate" />
-            <label class="active" for="first_name2">Enter Burger Name</label>
+        <div className="row">
+          <div className="input-field col s6">
+            <input value=" " id="first_name2" type="text" className="validate" />
+            <label className="active" for="first_name2">Enter Burger Name</label>
           </div>
         </div>
 
-        <button class="btn waves-effect orange accent-3" type="submit" name="action">Submit
-        <i class="material-icons right">control_point</i>
+        <button className="btn waves-effect orange accent-3" type="submit" name="action">Submit
+        <i className="material-icons right">control_point</i>
         </button>
 
 
