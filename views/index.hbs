@@ -1,0 +1,64 @@
+<center>
+  <div style="background-color: #444444;">
+<h1 style=" background-color: orange; height: 70px; padding-top: 12px">Eat-dat-Burger</h1>
+<br>
+<br>
+<br>
+<br>
+
+<img src="https://source.unsplash.com/featured/?hamburgers,burgers" style="max-height: 400px">
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="col-md-4">
+  <form class="col-md-12" action="/burger/add" method="POST">
+    <div class="col-md-11 col-md-offset-1 text-center" style="margin-top:15px">
+      <label for="burger" style="color: #444444; font-size: 20px">Enter Burger Name and Press Enter</label>
+      <input style="border: 1px solid black; width: 200px; height: 30px" type="text" id="burger" name="user_burger" required>
+    </div>
+  </form>
+</div>
+
+<div class="col-md-4">
+
+ 
+
+  <div class="col-md-12 text-center">
+    {{#each burger}}
+    {{#unless this.devoured}}
+    <form class="col-md-12" action="/burger/update/{{this.id}}?_method=PUT" method="POST">
+      <div class="burger_name"
+        style="font-size: 14pt; padding: 10px; color: #444444; font-weight: bold"
+        id="burger1">{{this.burger_name}}
+      </div>
+      <button class="btn btn-warning btn-xs" type="submit"><i class="fas fa-hamburger" style="font-size: 25px; padding-top: 10px"></i><p>Devour Me!</p></button>
+    </form>
+    {{/unless}}
+    {{/each}}
+  </div>
+</div>
+
+<div class="col-md-4">
+  <center>
+    
+  </center>
+  <div class="col-md-12 text-center">
+    {{#each burger}}
+    {{#if this.devoured}}
+    <form class="col-md-12" action="/burger/delete/{{this.id}}?_method=PUT" method="POST">
+      <div class="burger_name"
+        style="font-size: 14pt; padding: 10px; color: black">
+        {{this.burger_name}}
+      </div>
+      <button class="btn btn-warning btn-xs" type="submit"><i class="far fa-trash-alt" style="font-size: 25px; padding: 15px"></i></button>
+    </form>
+    {{/if}}
+    {{/each}}
+  </div>
+</div>
+</div>
