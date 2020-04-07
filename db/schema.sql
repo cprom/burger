@@ -1,10 +1,9 @@
-DROP DATABASE IF EXIST burger_db;
-CREATE DATABASE burger_db;
+  
+  use burgers_db;
 
-use burger_db;
-
-CREATE TABLE burgers (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  burger_name VARCHAR(50),
-  devoured BOOL
-)
+  create table burgers(
+    id int primary key auto_increment,
+    burger_name varchar(30) not null,
+    devoured boolean,
+    burger_time timestamp
+  );
